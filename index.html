@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academia Bushido BJJ – Porto Ferreira</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,600;0,700;1,400&family=Barlow+Condensed:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/landing.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">BUSHIDO<span>BJJ</span></a>
+      <ul class="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#modalidades">Modalidades</a></li>
+        <li><a href="#horarios">Horários</a></li>
+        <li><a href="#professores">Professores</a></li>
+        <li><a href="pages/gestao.html" class="nav-cta">Área do Professor</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-glow"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Porto Ferreira · SP</p>
+      <h1 class="hero-title">
+        A ARTE QUE<br/>
+        <span class="hero-title-accent">TRANSFORMA</span><br/>
+        VIDAS
+      </h1>
+      <p class="hero-desc">Jiu-Jitsu Brasileiro para todas as idades.<br/>Disciplina, respeito e evolução constante.</p>
+      <div class="hero-actions">
+        <a href="#contato" class="btn btn-primary">Aula Experimental Grátis</a>
+        <a href="#sobre" class="btn btn-ghost">Conheça a Academia</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-n">+200</span><span class="stat-l">Alunos Ativos</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-n">12+</span><span class="stat-l">Anos de História</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-n">8</span><span class="stat-l">Professores Faixa Preta</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Role para baixo</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="sobre" id="sobre">
+    <div class="container">
+      <div class="sobre-grid">
+        <div class="sobre-visual">
+          <div class="sobre-img-wrap">
+            <div class="sobre-img-placeholder">
+              <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="bjjGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#c8102e"/>
+                    <stop offset="100%" style="stop-color:#8b0000"/>
+                  </linearGradient>
+                </defs>
+                <rect width="400" height="500" fill="#0a0a0a"/>
+                <!-- Gi silhouette -->
+                <ellipse cx="200" cy="120" rx="70" ry="70" fill="#1a1a1a" stroke="#c8102e" stroke-width="2"/>
+                <path d="M130 200 Q200 170 270 200 L310 450 L90 450 Z" fill="#1a1a1a" stroke="#c8102e" stroke-width="2"/>
+                <path d="M130 200 L80 350 L140 370 L170 250" fill="#111" stroke="#c8102e" stroke-width="1.5"/>
+                <path d="M270 200 L320 350 L260 370 L230 250" fill="#111" stroke="#c8102e" stroke-width="1.5"/>
+                <!-- Belt -->
+                <rect x="90" y="290" width="220" height="22" rx="4" fill="url(#bjjGrad)" opacity="0.9"/>
+                <text x="200" y="306" text-anchor="middle" fill="white" font-family="Bebas Neue" font-size="14" letter-spacing="3">BUSHIDO BJJ</text>
+              </svg>
+            </div>
+            <div class="sobre-badge">
+              <span class="badge-year">2012</span>
+              <span class="badge-text">Fundada em<br/>Porto Ferreira</span>
+            </div>
+          </div>
+        </div>
+        <div class="sobre-text">
+          <p class="section-eyebrow">Nossa História</p>
+          <h2 class="section-title">Mais do que<br/>uma academia</h2>
+          <p class="sobre-p">A Bushido BJJ nasceu do sonho de levar o Jiu-Jitsu Brasileiro de qualidade para Porto Ferreira e região. Com mais de uma década formando campeões dentro e fora do tatame.</p>
+          <p class="sobre-p">Nosso método une técnica de alto nível com valores humanos — respeito, perseverança e solidariedade — para que cada aluno evolua como atleta e como pessoa.</p>
+          <div class="sobre-pillars">
+            <div class="pillar"><div class="pillar-icon">🥋</div><span>Técnica</span></div>
+            <div class="pillar"><div class="pillar-icon">🏆</div><span>Competição</span></div>
+            <div class="pillar"><div class="pillar-icon">🤝</div><span>Comunidade</span></div>
+            <div class="pillar"><div class="pillar-icon">💪</div><span>Condicionamento</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAIXAS HIGHLIGHT -->
+  <section class="faixas-strip">
+    <div class="faixa-item" style="--c:#fff">⬛ Branca</div>
+    <div class="faixa-item" style="--c:#1565C0">🟦 Azul</div>
+    <div class="faixa-item" style="--c:#6A1B9A">🟪 Roxa</div>
+    <div class="faixa-item" style="--c:#4E342E">🟫 Marrom</div>
+    <div class="faixa-item" style="--c:#212121">⬛ Preta</div>
+  </section>
+
+  <!-- MODALIDADES -->
+  <section class="modalidades" id="modalidades">
+    <div class="container">
+      <p class="section-eyebrow center">O que oferecemos</p>
+      <h2 class="section-title center">Modalidades</h2>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-num">01</div>
+          <h3>BJJ Kids</h3>
+          <p>Para crianças de 4 a 12 anos. Desenvolvimento motor, foco e disciplina de forma lúdica e segura.</p>
+          <span class="card-tag">4 – 12 anos</span>
+        </div>
+        <div class="card card-featured">
+          <div class="card-num">02</div>
+          <h3>BJJ Adulto</h3>
+          <p>Aulas técnicas para iniciantes e intermediários. Do básico à competição, evolução garantida.</p>
+          <span class="card-tag">A partir de 13 anos</span>
+        </div>
+        <div class="card">
+          <div class="card-num">03</div>
+          <h3>Competição</h3>
+          <p>Treinos específicos para atletas que desejam competir em campeonatos regionais e nacionais.</p>
+          <span class="card-tag">Intermediário+</span>
+        </div>
+        <div class="card">
+          <div class="card-num">04</div>
+          <h3>Defesa Pessoal</h3>
+          <p>Técnicas práticas para situações reais. Ideal para quem busca segurança e confiança no dia a dia.</p>
+          <span class="card-tag">Todos os níveis</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HORÁRIOS -->
+  <section class="horarios" id="horarios">
+    <div class="container">
+      <p class="section-eyebrow center">Planeje sua semana</p>
+      <h2 class="section-title center">Horários</h2>
+      <div class="schedule-wrap">
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Horário</th>
+              <th>Segunda</th>
+              <th>Terça</th>
+              <th>Quarta</th>
+              <th>Quinta</th>
+              <th>Sexta</th>
+              <th>Sábado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="time">07:00</td>
+              <td class="class-cell kids">BJJ Kids</td>
+              <td>—</td>
+              <td class="class-cell kids">BJJ Kids</td>
+              <td>—</td>
+              <td class="class-cell kids">BJJ Kids</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td class="time">18:00</td>
+              <td class="class-cell adult">Adulto</td>
+              <td class="class-cell comp">Competição</td>
+              <td class="class-cell adult">Adulto</td>
+              <td class="class-cell comp">Competição</td>
+              <td class="class-cell adult">Adulto</td>
+              <td class="class-cell adult">Open</td>
+            </tr>
+            <tr>
+              <td class="time">19:30</td>
+              <td class="class-cell adult">Adulto</td>
+              <td class="class-cell adult">Adulto</td>
+              <td class="class-cell adult">Adulto</td>
+              <td class="class-cell adult">Adulto</td>
+              <td class="class-cell adult">Adulto</td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td class="time">21:00</td>
+              <td class="class-cell def">Def. Pessoal</td>
+              <td>—</td>
+              <td class="class-cell def">Def. Pessoal</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="schedule-legend">
+          <span class="leg kids">BJJ Kids</span>
+          <span class="leg adult">Adulto</span>
+          <span class="leg comp">Competição</span>
+          <span class="leg def">Def. Pessoal</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROFESSORES -->
+  <section class="professores" id="professores">
+    <div class="container">
+      <p class="section-eyebrow center">Nossa equipe</p>
+      <h2 class="section-title center">Professores</h2>
+      <div class="prof-grid">
+        <div class="prof-card">
+          <div class="prof-avatar black-belt">
+            <span class="belt-emoji">🥋</span>
+          </div>
+          <h3>Prof. Carlos Mendes</h3>
+          <p class="prof-faixa">Faixa Preta 3º Grau</p>
+          <p class="prof-bio">15 anos de experiência. Campeão Paulista e Nacional. Especialista em fundamentos e alto rendimento.</p>
+        </div>
+        <div class="prof-card">
+          <div class="prof-avatar black-belt">
+            <span class="belt-emoji">🥋</span>
+          </div>
+          <h3>Profa. Ana Ferreira</h3>
+          <p class="prof-faixa">Faixa Preta 1º Grau</p>
+          <p class="prof-bio">Referência no BJJ feminino. Responsável pelas turmas kids e defesa pessoal para mulheres.</p>
+        </div>
+        <div class="prof-card">
+          <div class="prof-avatar black-belt">
+            <span class="belt-emoji">🥋</span>
+          </div>
+          <h3>Prof. Ricardo Lima</h3>
+          <p class="prof-faixa">Faixa Preta 2º Grau</p>
+          <p class="prof-bio">Especialista em competição. Formou dezenas de atletas medalhistas em campeonatos nacionais.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="depoimentos">
+    <div class="container">
+      <p class="section-eyebrow center">Quem vive a Bushido</p>
+      <h2 class="section-title center">Depoimentos</h2>
+      <div class="dep-grid">
+        <div class="dep-card">
+          <div class="dep-stars">★★★★★</div>
+          <p>"O Jiu-Jitsu mudou minha vida. Perdi 18kg, ganhei autoconfiança e fiz amigos pra sempre. A Bushido é a minha segunda família."</p>
+          <div class="dep-author"><strong>Marcos Oliveira</strong> · Faixa Azul</div>
+        </div>
+        <div class="dep-card dep-card-highlight">
+          <div class="dep-stars">★★★★★</div>
+          <p>"Coloquei meu filho de 7 anos nas turmas kids e a transformação foi incrível. Mais focado na escola, mais respeitoso em casa."</p>
+          <div class="dep-author"><strong>Patricia Souza</strong> · Mãe de aluno</div>
+        </div>
+        <div class="dep-card">
+          <div class="dep-stars">★★★★★</div>
+          <p>"Comecei sem saber nada aos 42 anos. A equipe me recebeu super bem e hoje treino competição. Nunca é tarde pra começar!"</p>
+          <div class="dep-author"><strong>João Carlos</strong> · Faixa Roxa</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO / CTA -->
+  <section class="contato" id="contato">
+    <div class="container">
+      <div class="contato-box">
+        <div class="contato-text">
+          <p class="section-eyebrow">Comece hoje</p>
+          <h2 class="section-title">Sua primeira<br/>aula é <span class="accent">gratuita</span></h2>
+          <p>Entre em contato agora e agende sua aula experimental sem compromisso. Venha sentir o tatame!</p>
+          <div class="contato-info">
+            <div class="info-row">📍 <span>Rua Exemplo, 123 – Centro, Porto Ferreira/SP</span></div>
+            <div class="info-row">📞 <span>(19) 99999-0000</span></div>
+            <div class="info-row">📸 <span>@bushibjj.portoferreira</span></div>
+          </div>
+        </div>
+        <form class="contato-form" id="contactForm">
+          <input type="text" placeholder="Seu nome completo" required />
+          <input type="tel" placeholder="WhatsApp / Telefone" required />
+          <input type="email" placeholder="Seu e-mail" />
+          <select>
+            <option value="">Modalidade de interesse</option>
+            <option>BJJ Kids (4–12 anos)</option>
+            <option>BJJ Adulto</option>
+            <option>Competição</option>
+            <option>Defesa Pessoal</option>
+          </select>
+          <button type="submit" class="btn btn-primary full-w">Quero Minha Aula Grátis 🥋</button>
+          <p class="form-note">Sem spam. Entraremos em contato em até 24h.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="nav-logo">BUSHIDO<span>BJJ</span></span>
+        <p>Formando campeões dentro e fora do tatame desde 2012.</p>
+      </div>
+      <div class="footer-links">
+        <p class="footer-title">Navegação</p>
+        <a href="#sobre">Sobre</a>
+        <a href="#modalidades">Modalidades</a>
+        <a href="#horarios">Horários</a>
+        <a href="pages/gestao.html">Área do Professor</a>
+      </div>
+      <div class="footer-links">
+        <p class="footer-title">Projeto</p>
+        <a href="#">Projeto de Extensão II – ADS</a>
+        <a href="#">Faculdade Anhanguera</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Bushido BJJ · Porto Ferreira · Projeto de Extensão Universitária – ADS</p>
+    </div>
+  </footer>
+
+  <script src="js/landing.js"></script>
+</body>
+</html>

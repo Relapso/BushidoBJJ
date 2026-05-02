@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestão de Graduação – Bushido BJJ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;600;700&family=Barlow+Condensed:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/gestao.css" />
+</head>
+<body>
+
+  <nav class="nav scrolled">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">BUSHIDO<span>BJJ</span></a>
+      <div class="nav-title">Gestão de Graduação</div>
+      <a href="../index.html" class="btn btn-ghost sm">← Voltar ao Site</a>
+    </div>
+  </nav>
+
+  <div class="app-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <button class="sidebar-btn active" data-view="dashboard">
+          <span class="sb-icon">📊</span> Dashboard
+        </button>
+        <button class="sidebar-btn" data-view="alunos">
+          <span class="sb-icon">👤</span> Alunos
+        </button>
+        <button class="sidebar-btn" data-view="cadastrar">
+          <span class="sb-icon">➕</span> Cadastrar Aluno
+        </button>
+        <button class="sidebar-btn" data-view="graduacao">
+          <span class="sb-icon">🥋</span> Registrar Graduação
+        </button>
+        <button class="sidebar-btn" data-view="historico">
+          <span class="sb-icon">📜</span> Histórico
+        </button>
+      </nav>
+      <div class="sidebar-belt-legend">
+        <p class="sidebar-legend-title">Faixas</p>
+        <div class="belt-leg" data-faixa="branca">⬜ Branca</div>
+        <div class="belt-leg" data-faixa="azul">🟦 Azul</div>
+        <div class="belt-leg" data-faixa="roxa">🟪 Roxa</div>
+        <div class="belt-leg" data-faixa="marrom">🟫 Marrom</div>
+        <div class="belt-leg" data-faixa="preta">⬛ Preta</div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- DASHBOARD -->
+      <div class="view active" id="view-dashboard">
+        <div class="view-header">
+          <h1>Dashboard</h1>
+          <p class="view-sub">Visão geral da academia</p>
+        </div>
+        <div class="stats-row" id="dashStats"></div>
+        <div class="dash-charts">
+          <div class="chart-card">
+            <h3>Alunos por Faixa</h3>
+            <div class="belt-chart" id="beltChart"></div>
+          </div>
+          <div class="chart-card">
+            <h3>Últimas Graduações</h3>
+            <div class="recent-list" id="recentGrads"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ALUNOS -->
+      <div class="view" id="view-alunos">
+        <div class="view-header">
+          <h1>Alunos Cadastrados</h1>
+          <div class="header-actions">
+            <input type="text" id="searchAluno" class="search-input" placeholder="Buscar aluno..." />
+            <button class="btn btn-primary sm" onclick="switchView('cadastrar')">+ Novo Aluno</button>
+          </div>
+        </div>
+        <div class="filter-row" id="filterRow">
+          <button class="filter-btn active" data-filter="todos">Todos</button>
+          <button class="filter-btn" data-filter="branca">Branca</button>
+          <button class="filter-btn" data-filter="azul">Azul</button>
+          <button class="filter-btn" data-filter="roxa">Roxa</button>
+          <button class="filter-btn" data-filter="marrom">Marrom</button>
+          <button class="filter-btn" data-filter="preta">Preta</button>
+        </div>
+        <div class="alunos-grid" id="alunosGrid"></div>
+      </div>
+
+      <!-- CADASTRAR -->
+      <div class="view" id="view-cadastrar">
+        <div class="view-header">
+          <h1>Cadastrar Novo Aluno</h1>
+        </div>
+        <div class="form-card">
+          <form id="formCadastro" class="app-form">
+            <div class="form-row two">
+              <div class="field">
+                <label>Nome Completo *</label>
+                <input type="text" id="cad-nome" required placeholder="Ex: João da Silva" />
+              </div>
+              <div class="field">
+                <label>CPF / RG</label>
+                <input type="text" id="cad-doc" placeholder="000.000.000-00" />
+              </div>
+            </div>
+            <div class="form-row two">
+              <div class="field">
+                <label>Data de Nascimento *</label>
+                <input type="date" id="cad-nasc" required />
+              </div>
+              <div class="field">
+                <label>Telefone / WhatsApp</label>
+                <input type="tel" id="cad-tel" placeholder="(19) 99999-0000" />
+              </div>
+            </div>
+            <div class="form-row two">
+              <div class="field">
+                <label>E-mail</label>
+                <input type="email" id="cad-email" placeholder="joao@email.com" />
+              </div>
+              <div class="field">
+                <label>Data de Matrícula *</label>
+                <input type="date" id="cad-matricula" required />
+              </div>
+            </div>
+            <div class="form-row two">
+              <div class="field">
+                <label>Faixa Inicial *</label>
+                <select id="cad-faixa" required>
+                  <option value="branca">Branca</option>
+                  <option value="azul">Azul</option>
+                  <option value="roxa">Roxa</option>
+                  <option value="marrom">Marrom</option>
+                  <option value="preta">Preta</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>Grau Inicial</label>
+                <select id="cad-grau">
+                  <option value="0">Sem grau</option>
+                  <option value="1">1º Grau</option>
+                  <option value="2">2º Grau</option>
+                  <option value="3">3º Grau</option>
+                  <option value="4">4º Grau</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label>Observações</label>
+                <textarea id="cad-obs" rows="3" placeholder="Lesões, informações relevantes..."></textarea>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button type="button" class="btn btn-ghost" onclick="switchView('alunos')">Cancelar</button>
+              <button type="submit" class="btn btn-primary">Cadastrar Aluno</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- GRADUAÇÃO -->
+      <div class="view" id="view-graduacao">
+        <div class="view-header">
+          <h1>Registrar Graduação</h1>
+          <p class="view-sub">Registre a nova faixa ou grau de um aluno</p>
+        </div>
+        <div class="form-card">
+          <form id="formGraduacao" class="app-form">
+            <div class="form-row">
+              <div class="field">
+                <label>Selecionar Aluno *</label>
+                <select id="grad-aluno" required>
+                  <option value="">— Selecione o aluno —</option>
+                </select>
+              </div>
+            </div>
+            <div class="aluno-preview" id="alunoPreview" style="display:none">
+              <div class="preview-belt" id="previewBelt"></div>
+              <div class="preview-info" id="previewInfo"></div>
+            </div>
+            <div class="form-row two">
+              <div class="field">
+                <label>Nova Faixa *</label>
+                <select id="grad-faixa" required>
+                  <option value="">— Selecione —</option>
+                  <option value="branca">Branca</option>
+                  <option value="azul">Azul</option>
+                  <option value="roxa">Roxa</option>
+                  <option value="marrom">Marrom</option>
+                  <option value="preta">Preta</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>Grau *</label>
+                <select id="grad-grau" required>
+                  <option value="0">Sem grau</option>
+                  <option value="1">1º Grau</option>
+                  <option value="2">2º Grau</option>
+                  <option value="3">3º Grau</option>
+                  <option value="4">4º Grau</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row two">
+              <div class="field">
+                <label>Data da Graduação *</label>
+                <input type="date" id="grad-data" required />
+              </div>
+              <div class="field">
+                <label>Professor Responsável</label>
+                <input type="text" id="grad-prof" placeholder="Nome do professor" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label>Observações / Motivo</label>
+                <textarea id="grad-obs" rows="3" placeholder="Critérios que levaram à graduação..."></textarea>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button type="button" class="btn btn-ghost" onclick="switchView('alunos')">Cancelar</button>
+              <button type="submit" class="btn btn-primary">Registrar Graduação 🥋</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- HISTÓRICO -->
+      <div class="view" id="view-historico">
+        <div class="view-header">
+          <h1>Histórico de Graduações</h1>
+          <div class="header-actions">
+            <select id="histAlunoFilter" class="search-input">
+              <option value="">Todos os alunos</option>
+            </select>
+          </div>
+        </div>
+        <div class="historico-list" id="historicoList"></div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- MODAL DETALHES -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="alunoModal">
+      <button class="modal-close" id="modalClose">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <script src="../js/gestao.js"></script>
+</body>
+</html>
